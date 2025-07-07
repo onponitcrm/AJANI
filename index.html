@@ -1,1 +1,60 @@
-<!-- Paste the full landing page HTML content here -->
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajani – Taste Like American Pie</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    .intro {
+      margin-top: 100px;
+    }
+
+    .intro img {
+      width: 200px;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    .tap-to-play {
+      font-size: 1.1em;
+      color: #bbb;
+      margin-top: 20px;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="intro">
+    <h1>Ajani – Taste Like American Pie</h1>
+    <div onclick="playTrack()" style="cursor:pointer;">
+      <img src="icon-192.png" alt="Play Icon" />
+      <div class="tap-to-play">Tap to Play</div>
+    </div>
+  </div>
+
+  <audio id="track" controls>
+    <source src="Taste_like_American_pie_3_FINAL_MASTERED.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function playTrack() {
+      const audio = document.getElementById("track");
+      audio.style.display = 'block';
+      audio.play().catch(() => alert("Tap to enable audio"));
+    }
+  </script>
+</body>
+</html>
+!-- Paste the full landing page HTML content here -->
