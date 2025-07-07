@@ -1,122 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajani – Taste Like American Pie</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    .intro-container {
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      margin: 100px auto 20px;
-      height: 400px;
-      cursor: pointer;
-    }
-
-    .intro-container img {
-      position: absolute;
-      width: 100%;
-      max-width: 400px;
-      transition: all 1s ease;
-    }
-
-    .left-hand {
-      z-index: 2;
-      transform: translateX(0);
-    }
-
-    .right-hand {
-      z-index: 2;
-      transform: translateX(0);
-    }
-
-    .cross {
-      z-index: 1;
-      opacity: 1;
-    }
-
-    .glow, .shards {
-      z-index: 0;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .break .left-hand {
-      transform: translateX(-150px) rotate(-10deg);
-      opacity: 0.9;
-    }
-
-    .break .right-hand {
-      transform: translateX(150px) rotate(10deg);
-      opacity: 0.9;
-    }
-
-    .break .glow, .break .shards {
-      opacity: 1;
-    }
-
-    #playText {
-      margin-top: 20px;
-      font-size: 1.1em;
-      color: #bbb;
-    }
-
-    #content {
-      opacity: 0;
-      transition: opacity 1s ease;
-      margin-top: 40px;
-    }
-
-    #content.show {
-      opacity: 1;
-    }
-  </style>
 </head>
 <body>
-
-  <div class="intro-container" id="intro" onclick="triggerBreak()">
-    <img src="icon-192.png" class="left-hand" />
-    <img src="icon-512.png" class="right-hand" />
-    <img src="icon-192.png" class="cross" />
-    <img src="icon-512.png" class="glow" />
-    <img src="icon-192.png" class="shards" />
-  </div>
-
-  <p id="playText">Tap to break the chains and hear the message</p>
-
-  <audio id="albumTrack" src="Taste_like_American_pie_3_FINAL_MASTERED.wav"></audio>
-
-  <div id="content">
-    <h2>Ajani – Taste Like American Pie</h2>
-    <p>Now streaming on all platforms.</p>
-  </div>
-
-  <script>
-    function triggerBreak() {
-      const intro = document.getElementById('intro');
-      const content = document.getElementById('content');
-      const audio = document.getElementById('albumTrack');
-
-      intro.classList.add('break');
-      if (window.navigator.vibrate) window.navigator.vibrate(200);
-
-      setTimeout(() => {
-        content.classList.add('show');
-        audio.play().catch(() => alert("Tap to allow audio."));
-        window.scrollTo({ top: content.offsetTop, behavior: 'smooth' });
-      }, 1000);
-    }
-  </script>
-
+  <h1>Ajani – Taste Like American Pie</h1>
+  <audio controls autoplay>
+    <source src="Taste_like_American_pie_3_FINAL_MASTERED.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>

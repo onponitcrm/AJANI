@@ -6,7 +6,8 @@ self.addEventListener('install', event => {
         '/index.html',
         '/manifest.json',
         '/icon-192.png',
-        '/icon-512.png'
+        '/icon-512.png',
+        '/Taste_like_American_pie_3_FINAL_MASTERED.mp3'
       ]);
     })
   );
