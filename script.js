@@ -1,10 +1,7 @@
 function triggerBreak() {
-  document.querySelector('.left-hand').classList.add('break');
-  document.querySelector('.right-hand').classList.add('break');
-  document.querySelector('.cross').classList.add('fade-out');
-  document.querySelector('.shards').classList.add('explode');
+  document.querySelector(".shards").style.display = "block";
 
-  const audio = document.getElementById('theme');
+  const audio = document.getElementById("introAudio");
   if (audio) {
     audio.play();
   }
