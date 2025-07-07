@@ -1,10 +1,11 @@
 function triggerBreak() {
-  document.getElementById("track").play();
-  
   document.querySelector('.left-hand').classList.add('break');
   document.querySelector('.right-hand').classList.add('break');
-  document.querySelector('.shards').classList.add('break');
+  document.querySelector('.cross').classList.add('fade-out');
+  document.querySelector('.shards').classList.add('explode');
 
-  const track = document.getElementById('track');
-  track.play();
+  const audio = document.getElementById('theme');
+  if (audio) {
+    audio.play();
+  }
 }
