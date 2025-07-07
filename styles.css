@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.intro-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  cursor: pointer;
+}
+
+.intro-container img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease-out;
+}
+
+.left-hand.break {
+  transform: translateX(-150px) rotate(-20deg);
+}
+
+.right-hand.break {
+  transform: translateX(150px) rotate(20deg);
+}
+
+.shards.break {
+  transform: scale(1.4) rotate(30deg);
+  opacity: 1;
+}
